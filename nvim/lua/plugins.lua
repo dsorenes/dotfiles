@@ -28,4 +28,8 @@ return require('packer').startup(function(use)
   use 'rust-lang/rust.vim'
   use 'simrat39/rust-tools.nvim'
 
+  use 'morhetz/gruvbox'
+
+  use 'jiangmiao/auto-pairs'
+
 end)
