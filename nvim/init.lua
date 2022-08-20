@@ -1,6 +1,7 @@
 require("plugins")
 require("remaps")
 require("set")
+require("theme")
 
 require"nvim-treesitter.configs".setup {
   highlight = {
@@ -23,6 +24,7 @@ require('rust-tools').setup({
     },
   }
 })
+
 
 local lspconfig = require('lspconfig')
 
@@ -47,6 +49,7 @@ lspconfig.rust_analyzer.setup({
     }
   }
 })
+vim.g["rustfmt_autosave"] = 1
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'pyright', 'tsserver' }
