@@ -20,11 +20,8 @@ fish_add_path $HOME/dotfiles
 set GOPATH /usr/local/go/bin
 
 fish_add_path $HOME/.local/bin/poetry
-set -gx PYENV_ROOT "$HOME/.pyenv"
 
 alias code='open -a "Visual Studio Code"'
-
-pyenv init - | source
 
 # The next line updates PATH for the Google Cloud SDK.
 if test -f "$HOME/Downloads/google-cloud-sdk/path.fish.inc"
