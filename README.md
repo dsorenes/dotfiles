@@ -40,6 +40,9 @@ Run:
 This creates symlinks from this repo into the expected config locations under
 `$HOME`.
 
+If a config path already exists, the script moves it aside to a
+`.pre-dotfiles-backup` path before creating the symlink.
+
 After that:
 
 ```sh
