@@ -1,8 +1,4 @@
-ctrl + cmd - c : yabai -m space --create
-ctrl + cmd - d : yabai -m space --create
-
 ctrl + cmd - a : yabai -m window --toggle fullscreen
-
 
 ctrl + cmd - l : yabai -m window --focus east
 ctrl + cmd - h : yabai -m window --focus west
@@ -14,20 +10,23 @@ shift + cmd - j : yabai -m window --swap south
 shift + cmd - k : yabai -m window --swap north
 shift + cmd - l : yabai -m window --swap east
 
-cmd - 1 : yabai -m space --focus 1
-cmd - 2 : yabai -m space --focus 2
-cmd - 3 : yabai -m space --focus 3
-cmd - 4 : yabai -m space --focus 4
-cmd - 5 : yabai -m space --focus 5
-cmd - 6 : yabai -m space --focus 6
-cmd - 7 : yabai -m space --focus 7
-cmd - 8 : yabai -m space --focus 8
+cmd - 1 : yabai -m space --focus 1 && yabai -m window --focus mouse
+cmd - 2 : yabai -m space --focus 2 && yabai -m window --focus mouse
+cmd - 3 : yabai -m space --focus 3 && yabai -m window --focus mouse
+cmd - 4 : yabai -m space --focus 4 && yabai -m window --focus mouse
+cmd - 5 : yabai -m space --focus 5 && yabai -m window --focus mouse
+cmd - 6 : yabai -m space --focus 6 && yabai -m window --focus mouse
+cmd - 7 : yabai -m space --focus 7 && yabai -m window --focus mouse
+cmd - 8 : yabai -m space --focus 8 && yabai -m window --focus mouse
+
 
 ctrl + cmd - 1 : yabai -m window --space 1 && yabai -m space --focus 1
 ctrl + cmd - 2 : yabai -m window --space 2 && yabai -m space --focus 2
 ctrl + cmd - 3 : yabai -m window --space 3 && yabai -m space --focus 3
 ctrl + cmd - 4 : yabai -m window --space 4 && yabai -m space --focus 4
 ctrl + cmd - 5 : yabai -m window --space 5 && yabai -m space --focus 5
+ctrl + cmd - 6 : yabai -m window --space 6 && yabai -m space --focus 6
+ctrl + cmd - 7 : yabai -m window --space 7 && yabai -m space --focus 7
 
 ctrl + cmd - c : yabai -m space --create
 ctrl + cmd - d : yabai -m space --destroy

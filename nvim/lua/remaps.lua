@@ -1,29 +1,35 @@
-local nnoremap = require('keymap').nnoremap
-local inoremap = require('keymap').inoremap
-local tnoremap = require('keymap').tnoremap
-local vnoremap = require('keymap').vnoremap
+local map = vim.keymap.set
 
-nnoremap("<Leader>pv", ":Exp<CR>")
+map("n", "<Leader>pv", vim.cmd.Ex)
 
-nnoremap("<Leader>t", ":FloatermToggle<CR>")
+map("n", "<Leader>t", "<Cmd>FloatermToggle<CR>", { silent = true })
 
-vnoremap("J", ":m '>+1<CR>gv=gv")
-vnoremap("K", ":m '<-2<CR>gv=gv")
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
 
-nnoremap("vv", "<C-W>v", {silent = true})
-nnoremap("vs", "<C-W>s", {silent = true})
+map("n", "vv", "<C-W>v", { silent = true })
+map("n", "vs", "<C-W>s", { silent = true })
 
-nnoremap("<C-j>", "<C-w>j")
-nnoremap("<C-k>", "<C-w>k")
-nnoremap("<C-l>", "<C-w>l")
-nnoremap("<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-h>", "<C-w>h")
 
-nnoremap("<C-w>+", "<C-w>10+")
-nnoremap("<C-w>-", "<C-w>10-")
+map("n", "<Leader>f", "<Cmd>!black %<CR>", { silent = true })
 
-nnoremap("<C-p>", ":lua require('telescope.builtin').git_files()<CR>")
-nnoremap("<C-g>", ":lua require('telescope.builtin').grep_string { search = vim.fn.expand(\"<cword\") }<CR>")
+map("n", "<C-p>", function()
+  require("telescope.builtin").git_files()
+end)
+map("n", "<C-y>", function()
+  require("telescope.builtin").find_files()
+end)
+map("n", "<C-g>", function()
+  require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") })
+end)
 
-vim.api.nvim_command([[
-tnoremap <C-j> <C-\><C-n>
-]])
+map("n", "gd", vim.lsp.buf.definition, { silent = true })
+map("n", "gs", vim.lsp.buf.hover, { silent = true })
+map("n", "gr", vim.lsp.buf.references, { silent = true })
+map("n", "gl", vim.diagnostic.open_float, { silent = true })
+
+map("t", "<C-j>", [[<C-\><C-n>]])

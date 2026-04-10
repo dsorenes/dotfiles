@@ -1,0 +1,5 @@
+# Copy this file to `local.fish` for machine-local settings that should not be
+# committed to the dotfiles repo.
+
+# Example:
+# set -gx OPENAI_API_KEY "replace-me"

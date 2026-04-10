@@ -1,0 +1,1 @@
+complete --command examine_xml.py --no-files --arguments "(env _EXAMINE_XML.PY_COMPLETE=complete_fish _TYPER_COMPLETE_FISH_ACTION=get-args _TYPER_COMPLETE_ARGS=(commandline -cp) examine_xml.py)" --condition "env _EXAMINE_XML.PY_COMPLETE=complete_fish _TYPER_COMPLETE_FISH_ACTION=is-args _TYPER_COMPLETE_ARGS=(commandline -cp) examine_xml.py"
